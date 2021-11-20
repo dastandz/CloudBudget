@@ -6,9 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
 </head>
@@ -16,12 +19,12 @@
 
 <header id="header">
     <div class="container">
-        <div class="header">
-            <a href="#header" class="header__logo">
+        <div class="header wow bounceIn">
+            <a href="#header" data-aos="fade-in" class="header__logo">
                 <img src="./img/logo.svg" alt="">
                 <span class="header__logo--text">CloudBudget</span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" data-aos="fade-up">
                 <a href="#" class="header__nav--item">overview</a>
                 <a href="#" class="header__nav--item">features</a>
                 <a href="#" class="header__nav--item">technology</a>
@@ -36,7 +39,6 @@
                 </select>
                 <button class="header__right--btn">login</button>
             </div>
-
             <div class="header__burger">
                 <span class="header__burger--line"></span>
             </div>
@@ -46,10 +48,10 @@
 <section id="hero">
     <div class="container">
         <div class="hero">
-            <h1 class="hero__title">CloudBudget</h1>
+            <h1 class="hero__title wow fadeInRight">CloudBudget</h1>
             <p class="hero__subtitle">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of
                 Up to €4.99</p>
-            <button class="hero__btn">
+            <button class="hero__btn wow bounceInUp">
                 Sign Up
             </button>
         </div>
@@ -57,7 +59,7 @@
 </section>
 <section id="easy">
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
             <div class="col-lg-6 col-md-12 easy">
                 <h1 class="easy__title">Easy to Use Cloud Budget Management Software</h1>
                 <p class="easy__subtitle">
@@ -81,8 +83,8 @@
         <h1 class="features--title">
             features
         </h1>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 features">
+        <div class="row" >
+            <div class="col-lg-4 col-md-6 col-sm-12 features" data-aos="fade-left">
                 <img src="./img/img1.png" alt="" class="features__img">
                 <div class="features__content">
                     <h4 class="features__content--title">Supports All Currencies and Cards</h4>
@@ -91,7 +93,7 @@
                     <a href="#" class="features__content--link">read more</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 features">
+            <div class="col-lg-4 col-md-6 col-sm-12 features" data-aos="fade-down">
                 <img src="./img/img2.png" alt="" class="features__img">
                 <div class="features__content">
                     <h4 class="features__content--title">Supports All Currencies and Cards</h4>
@@ -100,7 +102,7 @@
                     <a href="#" class="features__content--link">read more</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 features">
+            <div class="col-lg-4 col-md-6 col-sm-12 features" data-aos="fade-right">
                 <img src="./img/img3.png" alt="" class="features__img">
                 <div class="features__content">
                     <h4 class="features__content--title">Supports All Currencies and Cards</h4>
@@ -120,7 +122,7 @@
         <h1 class="technology--title">
             Technology
         </h1>
-        <div class="row">
+        <div class="row" data-aos="fade-up"   data-aos-delay="90">
             <div class="col-lg-3 col-md-6 col-sm-12 tech ">
                 <h1 class="tech__number">01</h1>
                 <div class="tech__min">
@@ -160,6 +162,11 @@
 
 <script src="./js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./js/wow.js"></script>
+<script>
+    new WOW().init();
+    AOS.init();
+</script>
 </body>
 </html>
